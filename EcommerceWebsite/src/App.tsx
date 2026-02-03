@@ -1,14 +1,32 @@
+import "./App.css";
+import NavBar from "./Components/navBar";
+import { Route, Routes } from "react-router-dom";
 
-import './App.css'
-import NavBar from '/Users/janish/Desktop/Programming/FrontandServerTesting/E-Commerce-Website-Team-Project/EcommerceWebsite/src/Components/navBar'
+import Home from "./Pages/homePage";
+import Products from "./Pages/productsPage";
+import About from "./Pages/aboutUsPage";
+import Basket from "./Pages/basketPage";
+import Support from "./Pages/supportPage";
+import Settings from "./Pages/settingsPage";
+import Profile from "./Pages/productsPage";
 
-function App() {
-
+export default function App() {
   return (
     <>
-    <NavBar/>
-    </>
-  )
-}
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/basket" element={<Basket />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
 
-export default App
+      <div className="cb-footer">
+        <span>© 2024 Core Byte. All rights reserved.</span>
+      </div>
+    </>
+  );
+}
