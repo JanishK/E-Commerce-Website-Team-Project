@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: none;
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,9 @@
 
 }
 
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   background: radial-gradient(1100px 650px at 18% 0%, rgba(132, 88, 179, 0.22), transparent 60% ), radial-gradient(900px at 88% 12%, rgba(160, 210, 235, 0.16), transparent 55%), var(--color-background);
 }
 
