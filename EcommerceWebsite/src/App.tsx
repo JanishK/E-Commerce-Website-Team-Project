@@ -10,6 +10,7 @@ import Support from "./Pages/supportPage";
 import Settings from "./Pages/settingsPage";
 import Profile from "./Pages/productsPage";
 
+
 export default function App() {
   return (
     <>
@@ -24,9 +25,6 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
       </Routes>
 
-      <div className="cb-footer">
-        <span>© 2024 Core Byte. All rights reserved.</span>
-      </div>
     </>
   );
 }
