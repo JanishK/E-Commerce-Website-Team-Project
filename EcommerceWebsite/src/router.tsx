@@ -7,7 +7,7 @@ import About from "./Pages/aboutUsPage";
 import Basket from "./Pages/basketPage";
 import Support from "./Pages/supportPage";
 import Settings from "./Pages/settingsPage";
-import Profile from "./Pages/productsPage";
+import Profile from "./Pages/profilePage";
 
 export const router = createBrowserRouter([
   {

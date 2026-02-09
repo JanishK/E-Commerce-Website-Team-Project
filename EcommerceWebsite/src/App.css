@@ -2039,6 +2039,422 @@ a:focus {
   border: 1px solid #bbf7d0;
 }
 
+/* ===============================
+   FINANCE DASHBOARD – CoreByte
+=============================== */
+
+.fd-page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.fd-sidebar {
+  padding: 28px 18px;
+  background: rgba(73, 77, 95, 0.6);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.fd-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fd-navItem {
+  background: transparent;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  font-weight: 900;
+  text-align: left;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  color: var(--text-muted);
+}
+
+.fd-navItem--active {
+  background: var(--surface-2);
+  color: var(--color-primary);
+  border-left: 4px solid var(--color-accent);
+}
+
+/* MAIN */
+
+.fd-main {
+  padding: 32px;
+}
+
+/* TOP BAR */
+
+.fd-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.fd-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.fd-subtitle {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* CONTENT GRID */
+
+.fd-content {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+}
+
+/* CARDS */
+
+.fd-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+  padding: 18px;
+}
+
+/* PROFILE */
+
+.fd-profileImage {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(160, 210, 235, 0.25);
+}
+
+.fd-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+.fd-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 14px 0;
+}
+
+/* BUTTONS */
+
+.fd-primaryBtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: var(--color-highlight);
+  color: var(--c-ice);
+  font-weight: 900;
+}
+
+/* RIGHT COLUMN */
+
+.fd-rightCol {
+  display: grid;
+  gap: 24px;
+}
+
+/* ACCOUNTS */
+
+.fd-accountBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.fd-accountLabel {
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.fd-accountNumber {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* STATUS BUTTONS */
+
+.fd-dangerBtn,
+.fd-successBtn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.fd-dangerBtn {
+  background: #ff4d4d;
+  color: white;
+}
+
+.fd-successBtn {
+  background: #4BB543;
+  color: white;
+}
+
+/* BILLS */
+
+.fd-billsList {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.fd-billItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fd-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.fd-dot--green {
+  background: #4BB543;
+}
+
+.fd-dot--orange {
+  background: orange;
+}
+
+.fd-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.fd-pill--paid {
+  background: rgba(75, 181, 67, 0.25);
+  color: #4BB543;
+}
+
+.fd-pill--unpaid {
+  background: rgba(255, 165, 0, 0.25);
+  color: orange;
+}
+
+/* ===============================
+   FINANCE DASHBOARD — TOPBAR RIGHT
+   (Matches your CoreByte theme)
+=============================== */
+
+.fd-topbarRight{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Shared button style (bell + user menu) */
+.fd-notificationBtn,
+.fd-userMenuBtn{
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: var(--shadow-subtle);
+  transition: transform var(--hover-transition),
+              box-shadow var(--hover-transition),
+              background-color var(--hover-transition),
+              border-color var(--hover-transition);
+}
+
+.fd-notificationBtn:hover,
+.fd-userMenuBtn:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+  background: var(--surface-2);
+  border-color: var(--hover-border);
+}
+
+.fd-notificationBtn:active,
+.fd-userMenuBtn:active{
+  transform: translateY(0) scale(0.99);
+  box-shadow: none;
+}
+
+.fd-notificationBtn:focus,
+.fd-userMenuBtn:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(140, 91, 255, 0.35);
+}
+
+/* -------------------------------
+   Notification bell icon (CSS)
+-------------------------------- */
+.fd-bellIcon{
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: inline-block;
+}
+
+/* bell dome */
+.fd-bellIcon::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 11px;
+  border: 2px solid rgba(229, 234, 245, 0.9);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  opacity: 0.95;
+}
+
+/* bell clapper */
+.fd-bellIcon::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 4px;
+  background: rgba(229, 234, 245, 0.9);
+  border-radius: 0 0 8px 8px;
+  opacity: 0.95;
+}
+
+/* Optional: little notification dot
+   add class="fd-notificationBtn has-dot" if you want it */
+.fd-notificationBtn.has-dot{
+  position: relative;
+}
+.fd-notificationBtn.has-dot::after{
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--color-highlight);
+  border: 2px solid var(--color-dark);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* -------------------------------
+   User avatar circle
+-------------------------------- */
+.fd-userAvatar{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 2px solid rgba(208, 189, 244, 0.55);
+
+  background:
+    radial-gradient(circle at 35% 30%, rgba(160, 210, 235, 0.55), transparent 55%),
+    linear-gradient(145deg, rgba(132, 88, 179, 0.55), rgba(73, 77, 95, 0.35));
+
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+  flex: 0 0 auto;
+}
+
+/* Text block */
+.fd-userText{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+}
+
+.fd-userHello{
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.fd-userName{
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--c-ice);
+  letter-spacing: 0.2px;
+}
+
+/* -------------------------------
+   Caret (fix: your old caret uses borders wrong)
+-------------------------------- */
+.fd-caretIcon{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 2px;
+
+  border-right: 2px solid rgba(229, 234, 245, 0.9);
+  border-bottom: 2px solid rgba(229, 234, 245, 0.9);
+  transform: rotate(45deg);
+  opacity: 0.9;
+}
+
+/* Make the bell button slightly tighter */
+.fd-notificationBtn{
+  padding: 10px;
+  width: 44px;
+  justify-content: center;
+}
+
+/* Mobile: hide “Hello” to save space */
+@media (max-width: 520px){
+  .fd-userHello{ display: none; }
+  .fd-userMenuBtn{ padding: 10px; }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .fd-page {
+    grid-template-columns: 1fr;
+  }
+
+  .fd-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .fd-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 /* ==============================
    RESPONSIVE
 ============================== */
