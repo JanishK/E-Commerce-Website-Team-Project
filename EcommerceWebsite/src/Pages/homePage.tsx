@@ -87,9 +87,8 @@ useEffect(() => {
             <button className="hero-btn">Shop Now</button>
           </div>
         </section>
-
+        <h2 className="section-title">Categories</h2>
         <section className="categories-section">
-          <h2 className="section-title">Categories</h2>
           <div className="categories-container">
             <button className="category-card">Action</button>
             <button className="category-card">Adventure</button>
@@ -100,9 +99,10 @@ useEffect(() => {
 
           </div>
         </section>
+        
+        <h2 className="section-title">Games Trending</h2>
 
         <section className="trending-section">
-            <h2 className="section-title">Games Trending</h2>
             {gamesTrending.map((item: any) => (
               <GamesTrendingCard 
                 key={item.trend_id}
@@ -114,9 +114,9 @@ useEffect(() => {
             ))}
 
         </section>
+        <h2 className="section-title">Deals of the Week</h2>
 
         <section className="deals-section">
-            <h2 className="section-title">Deals of the Week</h2>
             {dealsOfTheWeek.map((deal: any) => (
               <DealsOfTheWeek 
                 key={deal.deal_item_id}

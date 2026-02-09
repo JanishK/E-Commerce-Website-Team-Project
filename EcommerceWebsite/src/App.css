@@ -809,7 +809,7 @@ section{
 .deals-section,
 .platform-logos,
 .newsletter-section{
-  margin-top: 34px;
+  display: flex;
 }
 
 /* Section headings */
@@ -820,14 +820,14 @@ section{
   letter-spacing: 0.3px;
   margin: 0 0 14px;
   display: flex;
-  justify-content: center;
+  margin-top: 10px;
 }
 
 /* ===========================
    HERO
 =========================== */
 .hero-banner{
-  margin-top: 100px;
+  margin-top: 10px;
   height: 380px;
   border-radius: 22px;
   overflow: hidden;
